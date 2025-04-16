@@ -1,0 +1,141 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	color: #333;
+}
+
+body {
+	background-color: #f4f4f4;
+	/* line-height: 1.6; */
+}
+
+/* STYLING THE HEADER */
+
+header {
+	background: wheat;
+	color: #ffffff;
+	padding: 10px 0;
+	/* text-align: center; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+.logo {
+	font-size: 15px;
+	font-style: italic;
+	text-decoration: none;
+	color: #333;
+	transition: transform 0.5s ease-in-out;
+}
+
+.logo:hover {
+	transform: scale(1.1);
+}
+
+.navLinks {
+	display: flex;
+	list-style: none;
+}
+
+.navLinks li {
+	margin: 0 20px;
+}
+
+.navLinks a {
+	text-decoration: none;
+	color: #333;
+	padding: 5px 10px;
+	/* transition: background-color 0.3s ease; */
+}
+
+.navLinks a:hover {
+	background-color: #ddd;
+	border-radius: 5px;
+}
+
+/* STYLING THE MAIN CONTENT */
+
+main {
+	padding: 20px;
+	background-color: #fff;
+	/* margin: 20px; */
+	display: grid;
+	/* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+	grid-template-columns: repeat(2, 1fr);
+	gap: 50px;
+}
+
+.text {
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	text-align: justify;
+}
+
+.image {
+	padding: 20px;
+	margin-left: 20px;
+	border-radius: 5px;
+	/* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+	background-color: #f9f9f9;
+}
+
+/* STYLING THE FOOTER  */
+
+footer {
+	background: wheat;
+	color: #333;
+	text-align: center;
+	padding: 10px 0;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+	main {
+		grid-template-columns: 1fr;
+	}
+	.navLinks {
+		flex-direction: column;
+	}
+	.navLinks li {
+		margin: 10px 0;
+	}
+}
+@media (max-width: 480px) {
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.logo {
+		margin-bottom: 10px;
+	}
+}
+@media (max-width: 600px) {
+	.text {
+		padding: 10px;
+	}
+	.image {
+		padding: 10px;
+	}
+}
+@media (max-width: 400px) {
+	.navLinks li {
+		margin: 5px 0;
+	}
+}
+@media (max-width: 300px) {
+	header {
+		padding: 10px;
+	}
+	.logo {
+		font-size: 12px;
+	}
+}
